@@ -1,0 +1,4 @@
+List me the most similar signal
+Predict the modulation class of the given signal
+Summarise the signal
+List me the most different signal
