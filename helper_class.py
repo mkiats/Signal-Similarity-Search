@@ -1,4 +1,5 @@
 import os
+import shutil
 import torch
 import streamlit as st
 import faiss as FF
@@ -210,3 +211,12 @@ def initialise_llm_vector_db(question_dataset_dir, write_index_dir, model):
     # Saves the index
     write_index(faiss_index, write_index_dir)
     print("llm vector db done\n")
+    
+    
+        
+def reinitialise_path(_path):
+    # Initialises new environment
+    if os.path.exists(_path):
+        shutil.rmtree(_path)
+    if not os.path.exists(_path):
+        os.makedirs(_path)

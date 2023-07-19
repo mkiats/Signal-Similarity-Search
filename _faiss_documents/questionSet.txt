@@ -1,5 +1,12 @@
 List me the most similar signal
 Show me the closest signal
-Predict the modulation class of the given signal
-Summarise the signal
-List me the most different signal
+Give me the signal that resembles the uploaded signal
+Give a brief and short description of the signal
+What are the main characteristics of the signal
+How does the dataset look like
+What is the distribution of the dataset used
+What is the datetime / timestamp of the similar signals
+display the model architecture of the simclr model
+What layers does the simclr model used
+What are the hyperparameter values used
+How does the loss curve look like

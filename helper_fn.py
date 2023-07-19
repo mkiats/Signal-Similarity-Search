@@ -1,5 +1,6 @@
 import os
 import torch
+import shutil
 import streamlit as st
 import faiss as FF
 import numpy as np
@@ -17,9 +18,9 @@ from helper_class import *
 cosineIndex_llmPath = os.path.join("_faiss_index", "faiss_questionset_65B")
 cosineIndex_signalPath = os.path.join("_faiss_index", "faiss_signalSet")
 # llm_modelPath = os.path.join("_model", "alpaca-lora-65B.ggmlv3.q4_0.bin")
-llm_modelPath = os.path.join("_model", "ggml-model-f16-q4_0.bin")
+llm_modelPath = os.path.join("_model", "llama-2-13b.ggmlv3.q4_0.bin")
 simclr_model_path = os.path.join("_model", "lr1e-05b32_30.pth")
-signal_dataset_path = os.path.join("data", "train")
+signal_dataset_path = os.path.join("_trial_data", "train")
 
 loader = TextLoader('./_faiss_documents/questionSet.txt')
 documents = loader.load()
@@ -66,9 +67,6 @@ def find_k_most_similar(uploaded_signal_path, k_neighbours=3):
     idx = idx.squeeze()
     
     res=list(zip(idx, similarity)) # res = [(x1, y1), (x2, y2)] where x is the index, y is the cosine similarity
-    signals = os.listdir(signal_dataset_path)
-    for i,j in res:
-        print(signals[i])
     return res
 
 def predict_signal(uploaded_signal_path, k_neighbours=3):
@@ -96,8 +94,15 @@ def summarise_dataset(uploaded_signal_path, k_neighbours=3):
     # TODO: show distribution of train and validation set
     return 
 
-def show_accuracy_score_dataset(uploaded_signal_path, k_neighbours=3):
-    # TODO: plot graph: Accuracy score against modulationn type
+def show_similar_signal_timestamp(uploaded_signal_path, k_neighbours=3, signal_similarity_threshold=0.9):
+    results = find_k_most_similar(uploaded_signal_path, k_neighbours)
+    signal_dataset = os.listdir(signal_dataset_path)
+    
+    for idx, sim in results:
+        if sim > signal_similarity_threshold:
+            file_name = os.path.basename(signal_dataset[idx])
+            timestamp = int(file_name.split("_")[1])
+            print(timestamp, sim)
     return
 
 # Helper functions for questions on model
@@ -115,14 +120,14 @@ def show_hyperpara_model(uploaded_signal_path, k_neighbours=3):
     
     print(f"Learning rate is {LR}\n",
           f"Num of epochs is {NUM_EPOCHS}\n",
-          f"Batch size is {BATCH_SIZE}",
-          f"Final embedding size is {embedding_size}"
+          f"Batch size is {BATCH_SIZE}\n",
+          f"Final embedding size is {embedding_size}\n"
           )
     return
 
 def show_loss_curve_model(uploaded_signal_path, k_neighbours=3):
-    # TODO plot loss curve
-    return
+    # TO BE REMOVED
+    return (x_arr, y_arr)
 
 
 def invalid_fn(uploaded_signal_path, k_neighbours=3):
@@ -153,10 +158,12 @@ query_dict = {
 fn_dict = {
     -1: invalid_fn,
     0: find_k_most_similar,
-    1: predict_signal,
-    2: summarise_signal,
-    3: summarise_dataset,
-    4: show_model
+    1: summarise_signal,
+    2: summarise_dataset,
+    3: show_similar_signal_timestamp, #Previously show accuracy score
+    4: show_model,
+    5: show_hyperpara_model,
+    6: show_loss_curve_model
 }
 
 # Generate similar queries that exceeds the threshold
@@ -188,41 +195,31 @@ def process_general_query(cur_query, cosine_search_threshold=0.6, k_neighbours=3
     query_list=list(zip(idx, dist)) # Contains id of questions that are similar
     print(query_list)
     filtered_query = []
+    filtered_id = []
     # Eliminate questions with cosine similarity lower than threshold
-    for i in reversed(range(len(query_list))):
+    for i in range(len(query_list)):
         (query_id, query_sim) = query_list[i]
         if (query_sim<cosine_search_threshold):
-            query_list.pop(i)
             continue
 
         if query_dict[query_id] not in filtered_query:
             filtered_query.append(query_dict[query_id]) # query_dict[i] -> fn_dict key
+            filtered_id.append(query_list[i])
         else:
-            query_list.pop(i)
+            continue
 
     if len(query_list)==0:
         process_empty_list(cur_query_copy)
 
-    return query_list
+    return filtered_id
 
 
 
-def process_selected_query(query_id, uploaded_signal_path):
-    fn_id = query_dict.get(query_id)
-    print(fn_dict[fn_id])
+def process_selected_query(fn_id, uploaded_signal_path):
     output = fn_dict[fn_id](uploaded_signal_path=uploaded_signal_path, k_neighbours=5)
     return output
         
-        
-def reinitialise_path(_path):
-    # Initialises new environment
-    if os.path.exists(_path):
-        toBeRemoved = _path
-        shutil.rmtree(toBeRemoved)
 
-    if not os.path.exists(_path):
-        os.makedirs(_path)
-    return
 
 def streamlit_find_k_most_similar():
     
