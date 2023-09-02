@@ -1,0 +1,11 @@
+List me similar signals from the database 0
+Give me signals that resembles the uploaded signal 0
+What is my signal type 0
+Plot my signal 1
+Show me my signal spectrogram 1
+How does the dataset look like 2
+What is the distribution of the dataset used 2
+I want to learn more about a signal type 3
+Tell me more about... 3
+Distribution of particular signal type over time 4
+Frequency of occurrence of particular signal type 4

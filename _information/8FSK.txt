@@ -1,0 +1,5 @@
+8FSK stands for 8-Level Frequency Shift Keying. It is a digital modulation technique used in communication systems to transmit data over a radio frequency channel. In 8FSK, different digital symbols are represented by different frequencies, and the receiver decodes these frequencies to recover the transmitted data.
+
+In 8FSK, there are eight different frequencies that can be used to represent eight different symbols or bits. Each symbol is usually transmitted during a specific time interval, and the receiver samples the received signal to identify the frequency corresponding to each symbol.
+
+8FSK is commonly used in various communication standards, including some wireless communication protocols and data transmission systems. It offers a balance between data rate and spectral efficiency and can provide reliable data transmission in various environments.

@@ -1,0 +1,3 @@
+Jindalee is a radar system developed by Australia for long-range surveillance and monitoring of the surrounding airspace and oceans. It is a state-of-the-art over-the-horizon radar (OTHR) that can detect and track aircraft, ships, and other objects at very long distances, including beyond the horizon.
+
+The Jindalee radar system uses the phenomenon of ionospheric reflection to extend its surveillance range over vast distances. It sends powerful radar signals into the ionosphere, where they bounce off the ionized layers and return to Earth. By analyzing the reflected signals, the radar can detect and identify aircraft and vessels that are far beyond the reach of conventional radars.

@@ -1,0 +1,7 @@
+Tone, in the context of signals and communications, refers to a continuous wave (CW) signal that consists of a single frequency. It is characterized by its steady and constant amplitude and does not contain any modulation or variations in frequency or amplitude over time.
+
+Tones are fundamental components used in various applications, such as audio communication, musical instruments, and telecommunications. In audio communication, tones are used for generating simple sounds, like the dial tones on a telephone or alert tones in devices. In music, tones represent specific musical notes with distinct frequencies.
+
+In telecommunications, tones are essential for signaling purposes. For example, Dual-Tone Multi-Frequency (DTMF) tones are used in touch-tone phones to represent different digits, while other tones may signify specific events or conditions in communication systems.
+
+Tones are also used in signal processing and testing, where they can be employed as reference signals for calibration or to analyze the frequency response of systems and devices.

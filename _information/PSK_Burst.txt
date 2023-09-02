@@ -1,0 +1,7 @@
+PSK stands for Phase-Shift Keying, which is a modulation scheme used in digital communication systems. In PSK modulation, the phase of the carrier signal is modulated to represent digital data. The phase of the carrier signal is shifted to different angles to encode different symbols, typically represented by binary 0s and 1s.
+
+There are different variants of PSK, including Binary Phase-Shift Keying (BPSK), Quadrature Phase-Shift Keying (QPSK), 8-PSK, 16-PSK, and more. Each variant uses a different number of phase shifts to represent multiple bits per symbol, allowing for higher data rates.
+
+PSK is widely used in various communication systems, including wireless communication, satellite communication, and digital broadcasting, due to its ability to efficiently encode digital information onto an analog carrier signal. It offers good performance in the presence of noise and interference, making it suitable for reliable data transmission.
+
+In summary, PSK is a modulation scheme used in digital communication to encode binary data by varying the phase of the carrier signal. It is a fundamental technique in modern communication systems that enables efficient and robust data transmission.

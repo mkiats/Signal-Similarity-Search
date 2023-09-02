@@ -1,0 +1,7 @@
+RTTY850 is a variant of the RTTY (Radio Teletype) digital communication mode. It operates at a baud rate of 850 bits per second (bps), which is the rate at which symbols (binary data) are transmitted over the radio channel.
+
+Like standard RTTY, RTTY850 uses two different audio frequencies, known as the "mark" and "space" tones, to represent binary 1 and 0, respectively. These tones are modulated using frequency shift keying (FSK) to encode the binary data.
+
+The RTTY850 signal is typically used for various purposes, including data communications, teletype applications, and exchanging text messages over radio channels. It is commonly used in amateur radio and has been utilized in professional and military communication systems as well.
+
+The choice of baud rate (850 bps) in RTTY850 allows for relatively fast data transmission while maintaining a level of robustness suitable for communication over radio channels with varying signal conditions and interference.

@@ -1,0 +1,7 @@
+Grated Burst is a type of radio frequency signal commonly found in the high-frequency (HF) spectrum. It is characterized by bursts of radio waves with varying amplitudes and frequencies, resulting in a unique and distinct pattern. Grated Burst signals are often used in various communication and radar applications.
+
+These signals are typically used in military and defense systems for secure and reliable communication. They are designed to be resilient against interference and jamming, making them suitable for use in challenging and congested environments.
+
+The term "grated" in Grated Burst refers to the signal being divided into bursts or short segments, which may have different modulation schemes and timing patterns. This segmentation allows for efficient transmission and reception of information.
+
+Grated Burst signals are often used in conjunction with advanced modulation and coding techniques to achieve high data rates and improved signal quality. Due to their specific characteristics, they are well-suited for applications where robust and reliable communication is essential.

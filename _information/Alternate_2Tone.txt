@@ -1,0 +1,5 @@
+Alternate_2Tone refers to a type of dual-tone modulation used in communication systems. It involves the alternating transmission of two different audio tones, each representing a binary digit (0 or 1). These tones are usually sinusoidal waveforms with distinct frequencies.
+
+In Alternate_2Tone, the two tones are transmitted in an alternating pattern, with each tone representing a specific digital bit. For example, one tone may represent a binary 0, while the other represents a binary 1. The receiver decodes the received signal by detecting the specific frequencies of the alternating tones and interprets them as the corresponding binary sequence.
+
+This modulation scheme is commonly used in various applications, including radio communication systems and data transmission. It provides a simple and efficient way to transmit binary data over an analog channel, allowing for reliable communication and data transfer.

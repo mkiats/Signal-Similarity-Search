@@ -1,0 +1,3 @@
+3T refers to a signal with three-tone modulation. In three-tone modulation, three different frequencies are combined to create the signal. Each frequency may carry different types of information, and the combination of these tones can result in various signal patterns.
+
+Three-tone modulation is commonly used in various communication systems and applications, including radio frequency (RF) communications, audio signal processing, and musical synthesis. The specific characteristics and use of a 3T signal would depend on the context and purpose for which it is used.

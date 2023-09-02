@@ -1,0 +1,7 @@
+Selcall, short for "Selective Calling," is a signaling system used in two-way radio communication to selectively activate specific receivers or stations. It enables a sender to establish a private communication link with a particular receiver or a group of receivers within a network.
+
+In a Selcall system, each radio station is assigned a unique code, often referred to as a "Selcall code" or "Selective Call Code." When a station wants to initiate communication with another station, it transmits its unique Selcall code over the radio channel. The receiver stations continuously monitor the channel for incoming Selcall codes. When a station detects its specific code, it activates an alert signal, indicating that it is being called.
+
+Selcall is widely used in various industries, including public safety, emergency services, transportation, and other professional radio communication applications. It enhances communication efficiency and privacy by allowing direct, private calls to specific stations without broadcasting messages to all receivers on the network.
+
+The Selcall signaling system operates independently of voice or data transmission. Once the calling station successfully activates the desired receiver using Selcall, voice or data communication can begin between the two stations.

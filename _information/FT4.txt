@@ -1,0 +1,5 @@
+"FT4" is a digital communications mode used in amateur radio for shortwave (HF) radio communication. It is part of the FT (Franke-Taylor) series of digital modes developed by Joe Taylor (K1JT) and Steve Franke (K9AN). FT4 is designed to be faster and more robust than its predecessor, FT8, while still maintaining good sensitivity and efficiency for weak signal communication.
+
+FT4 uses a four-tone frequency-shift keying (FSK) modulation scheme to transmit data. It operates with a 4.6-second T/R (transmit/receive) sequence, allowing for rapid exchanges of short messages. This makes FT4 well-suited for making contacts under challenging propagation conditions, such as during periods of high solar activity or poor radio conditions.
+
+FT4 is widely used in the amateur radio community for making contacts and exchanging messages, especially in contests and other events where quick and reliable communication is essential. Its popularity has grown due to its efficiency and ability to work with weak signals, making it a valuable tool for amateur radio operators worldwide.

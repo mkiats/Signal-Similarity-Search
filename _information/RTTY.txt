@@ -1,0 +1,7 @@
+RTTY (Radio Teletype) is a digital communication mode used in radio transmissions to send and receive text messages. It was one of the earliest digital modes in radio communications and has been widely used for various purposes, including military, maritime, and amateur radio applications.
+
+In RTTY, information is encoded into two different audio frequencies, known as the "mark" and "space" tones. These tones represent binary 1 and 0, respectively. The RTTY signal is typically transmitted using frequency shift keying (FSK), where the mark and space frequencies are modulated to represent the binary data.
+
+The receiving station demodulates the RTTY signal and decodes the binary data back into text messages, which can then be displayed on a teleprinter or a computer terminal.
+
+RTTY is known for its simplicity and robustness, making it suitable for communication over noisy radio channels. It has been widely used in various radio services, including maritime radio, aviation, and amateur radio, where it continues to be a popular mode for digital communications.
